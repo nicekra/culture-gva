@@ -1,0 +1,837 @@
+[
+ {
+  "id": 1392,
+  "name": "Arcade socio-culturelle Les-Sciers",
+  "city": "Plan-les-Ouates"
+ },
+ {
+  "id": 1334,
+  "name": "Archipel Michel Butor",
+  "city": ""
+ },
+ {
+  "id": 1140,
+  "name": "ARCOOP",
+  "city": ""
+ },
+ {
+  "id": 81,
+  "name": "Arena de Genève",
+  "city": "Le Grand-Saconnex"
+ },
+ {
+  "id": 1148,
+  "name": "Au Pré de l'eau",
+  "city": ""
+ },
+ {
+  "id": 1224,
+  "name": "Auberge des Vergers - Meyrin",
+  "city": "Meyrin"
+ },
+ {
+  "id": 230,
+  "name": "Auditoire Calvin",
+  "city": ""
+ },
+ {
+  "id": 304,
+  "name": "Auditorium du Perrier",
+  "city": "Annemasse"
+ },
+ {
+  "id": 1447,
+  "name": "Aula des Vergers",
+  "city": "Meyrin"
+ },
+ {
+  "id": 195,
+  "name": "Bains des Pâquis",
+  "city": "Genève"
+ },
+ {
+  "id": 1335,
+  "name": "Bermuda",
+  "city": ""
+ },
+ {
+  "id": 43,
+  "name": "Bois de la Bâtie",
+  "city": ""
+ },
+ {
+  "id": 1181,
+  "name": "Café de la Place",
+  "city": "Genève"
+ },
+ {
+  "id": 1191,
+  "name": "Caserne des Vernets",
+  "city": ""
+ },
+ {
+  "id": 705,
+  "name": "Cave Marignac",
+  "city": "Grand-Lancy"
+ },
+ {
+  "id": 1166,
+  "name": "Centre arménien de Genève",
+  "city": "Troinex"
+ },
+ {
+  "id": 1248,
+  "name": "Centre de Formation Professionnelle Nature et Environnement de Lullier",
+  "city": ""
+ },
+ {
+  "id": 392,
+  "name": "Centre Geisendorf",
+  "city": ""
+ },
+ {
+  "id": 544,
+  "name": "Centre Paroissial Œcuménique de Meyrin",
+  "city": "Meyrin"
+ },
+ {
+  "id": 297,
+  "name": "CERN",
+  "city": "Meyrin"
+ },
+ {
+  "id": 13,
+  "name": "Château Rouge",
+  "city": ""
+ },
+ {
+  "id": 1210,
+  "name": "Chez Jean-Luc",
+  "city": ""
+ },
+ {
+  "id": 1288,
+  "name": "Cinéma Plaza",
+  "city": ""
+ },
+ {
+  "id": 889,
+  "name": "CMA - Centre des Musiques Actuelles",
+  "city": "Genève"
+ },
+ {
+  "id": 1338,
+  "name": "Col de la Faucille",
+  "city": ""
+ },
+ {
+  "id": 1239,
+  "name": "Conservatoire à Rayonnement Régional d’Annecy",
+  "city": "Annecy"
+ },
+ {
+  "id": 1317,
+  "name": "Couvert de Certoux",
+  "city": ""
+ },
+ {
+  "id": 1332,
+  "name": "Domaine de la Vigne Blanche",
+  "city": ""
+ },
+ {
+  "id": 1314,
+  "name": "Domaine des Vignolles",
+  "city": ""
+ },
+ {
+  "id": 1337,
+  "name": "Domaine du château du Crest",
+  "city": ""
+ },
+ {
+  "id": 1316,
+  "name": "Ecole d'Aire-la-Ville",
+  "city": ""
+ },
+ {
+  "id": 1282,
+  "name": "Ecole de Danse de Genève",
+  "city": ""
+ },
+ {
+  "id": 1264,
+  "name": "Église Adventiste de Renens",
+  "city": ""
+ },
+ {
+  "id": 75,
+  "name": "Eglise catholique romaine",
+  "city": "Plan-les-Ouates"
+ },
+ {
+  "id": 1274,
+  "name": "Eglise de Ferney-Voltaire",
+  "city": ""
+ },
+ {
+  "id": 1265,
+  "name": "Eglise de la Pélisserie",
+  "city": ""
+ },
+ {
+  "id": 293,
+  "name": "Eglise de Puplinge",
+  "city": "Puplinge"
+ },
+ {
+  "id": 288,
+  "name": "Église Luthérienne",
+  "city": ""
+ },
+ {
+  "id": 1183,
+  "name": "Eglise Saint-Antoine de Padoue",
+  "city": ""
+ },
+ {
+  "id": 52,
+  "name": "Eglise Saint-Joseph",
+  "city": "Genève"
+ },
+ {
+  "id": 1113,
+  "name": "Église Sainte-Trinité",
+  "city": "Grand-Lancy"
+ },
+ {
+  "id": 960,
+  "name": "Espace Diamono",
+  "city": "Carouge"
+ },
+ {
+  "id": 72,
+  "name": "Espace Fusterie",
+  "city": ""
+ },
+ {
+  "id": 1647,
+  "name": "Espace Nouveau Vallon",
+  "city": "Chêne-Bougeries"
+ },
+ {
+  "id": 446,
+  "name": "Ferme de Saint-Maurice",
+  "city": "Collonge-Bellerive"
+ },
+ {
+  "id": 1190,
+  "name": "Ferme du Monniati",
+  "city": "Jussy"
+ },
+ {
+  "id": 216,
+  "name": "Festival Friction(s)",
+  "city": "Annemasse - France"
+ },
+ {
+  "id": 1291,
+  "name": "Gare du Nord",
+  "city": ""
+ },
+ {
+  "id": 218,
+  "name": "Geneva Camerata",
+  "city": ""
+ },
+ {
+  "id": 63,
+  "name": "Grand Théâtre de Genève (GTG)",
+  "city": "Genève"
+ },
+ {
+  "id": 443,
+  "name": "Grand Théâtre de Genève / Opéra des Nations",
+  "city": ""
+ },
+ {
+  "id": 529,
+  "name": "Grange de la Touvière",
+  "city": "Meinier"
+ },
+ {
+  "id": 1627,
+  "name": "Grange Navazza",
+  "city": "Lancy"
+ },
+ {
+  "id": 1184,
+  "name": "Halle 7",
+  "city": ""
+ },
+ {
+  "id": 103,
+  "name": "Halles de la Fonderie",
+  "city": ""
+ },
+ {
+  "id": 459,
+  "name": "Haute Ecole de Musique de Genève (HEM) - Bâtiment Dufour",
+  "city": "Genève"
+ },
+ {
+  "id": 912,
+  "name": "Haute Ecole de Musique de Genève (HEM) | Salle de la Bourse",
+  "city": ""
+ },
+ {
+  "id": 1141,
+  "name": "HEAD - Le Cube",
+  "city": ""
+ },
+ {
+  "id": 1202,
+  "name": "Hôpital Belle-Idée",
+  "city": ""
+ },
+ {
+  "id": 1187,
+  "name": "Hôtel Ibis Styles",
+  "city": ""
+ },
+ {
+  "id": 142,
+  "name": "Jardin d'Aventures",
+  "city": ""
+ },
+ {
+  "id": 1738,
+  "name": "Jazz sur la plage",
+  "city": "Hermance"
+ },
+ {
+  "id": 350,
+  "name": "L'Abri - Madeleine",
+  "city": "Genève"
+ },
+ {
+  "id": 1162,
+  "name": "L'Almacen",
+  "city": "Genève"
+ },
+ {
+  "id": 1240,
+  "name": "L'Auditorium Seynod",
+  "city": ""
+ },
+ {
+  "id": 1200,
+  "name": "L'Écurie",
+  "city": ""
+ },
+ {
+  "id": 110,
+  "name": "L'Épicentre",
+  "city": "Collonge-Bellerive"
+ },
+ {
+  "id": 129,
+  "name": "L'Étincelle",
+  "city": "Genève"
+ },
+ {
+  "id": 1214,
+  "name": "La Butte",
+  "city": ""
+ },
+ {
+  "id": 1626,
+  "name": "La Collective",
+  "city": "Genève"
+ },
+ {
+  "id": 1349,
+  "name": "La Ferma",
+  "city": "Boëge (F)"
+ },
+ {
+  "id": 1245,
+  "name": "La Fraternelle",
+  "city": "Saint-Claude"
+ },
+ {
+  "id": 419,
+  "name": "La Gavotte",
+  "city": ""
+ },
+ {
+  "id": 1179,
+  "name": "La Grange au Lac",
+  "city": "Neuvecelle"
+ },
+ {
+  "id": 146,
+  "name": "La Gravière",
+  "city": ""
+ },
+ {
+  "id": 420,
+  "name": "La Maison du Marais",
+  "city": ""
+ },
+ {
+  "id": 1450,
+  "name": "La Musicale",
+  "city": "Genève"
+ },
+ {
+  "id": 136,
+  "name": "Le Box",
+  "city": "Carouge"
+ },
+ {
+  "id": 1243,
+  "name": "Le Brise Glace",
+  "city": "Annecy"
+ },
+ {
+  "id": 953,
+  "name": "Le Damier",
+  "city": ""
+ },
+ {
+  "id": 1242,
+  "name": "Le Jazz Club",
+  "city": "Annecy"
+ },
+ {
+  "id": 550,
+  "name": "Le Monde à part",
+  "city": ""
+ },
+ {
+  "id": 1251,
+  "name": "Le Phare",
+  "city": ""
+ },
+ {
+  "id": 1278,
+  "name": "Le Trois Plis",
+  "city": ""
+ },
+ {
+  "id": 1177,
+  "name": "Les 4 Coins",
+  "city": ""
+ },
+ {
+  "id": 1246,
+  "name": "Les Carrés",
+  "city": "Annecy-le-Vieux"
+ },
+ {
+  "id": 296,
+  "name": "Les concerts de Jussy",
+  "city": "Jussy"
+ },
+ {
+  "id": 1002,
+  "name": "Lyceum Club International",
+  "city": ""
+ },
+ {
+  "id": 1273,
+  "name": "Mail 2000",
+  "city": "Plan-les-Ouates"
+ },
+ {
+  "id": 1232,
+  "name": "Maison des Arts du Leman",
+  "city": "Thonon-les-Bains"
+ },
+ {
+  "id": 1448,
+  "name": "Maison des Compagnies",
+  "city": "Meyrin"
+ },
+ {
+  "id": 1333,
+  "name": "Maison des Habitants",
+  "city": ""
+ },
+ {
+  "id": 1241,
+  "name": "MJC de Chamonix-Mont-Blanc",
+  "city": "Chamonix-Mont-Blanc"
+ },
+ {
+  "id": 955,
+  "name": "Montreux Jazz Café",
+  "city": "Genève"
+ },
+ {
+  "id": 1226,
+  "name": "Moulin de Carra - Ville-la-Grand",
+  "city": ""
+ },
+ {
+  "id": 1211,
+  "name": "Mr. Pickwick Pub",
+  "city": "Genève"
+ },
+ {
+  "id": 1247,
+  "name": "OCA - L'Agora",
+  "city": "Bonneville"
+ },
+ {
+  "id": 761,
+  "name": "One More Time",
+  "city": "Genève"
+ },
+ {
+  "id": 71,
+  "name": "Orchestre de Chambre de Genève",
+  "city": ""
+ },
+ {
+  "id": 82,
+  "name": "Orchestre de la Suisse Romande",
+  "city": ""
+ },
+ {
+  "id": 1233,
+  "name": "Parc de La Perle du lac",
+  "city": ""
+ },
+ {
+  "id": 1219,
+  "name": "Parc des Bougeries",
+  "city": ""
+ },
+ {
+  "id": 73,
+  "name": "Parc des Cropettes",
+  "city": ""
+ },
+ {
+  "id": 1434,
+  "name": "Parc Fantasia",
+  "city": "Annemasse"
+ },
+ {
+  "id": 864,
+  "name": "Parc La Grange",
+  "city": "Genève"
+ },
+ {
+  "id": 1433,
+  "name": "Parc Olympe de Gouges",
+  "city": "Annemasse"
+ },
+ {
+  "id": 1136,
+  "name": "Parking du Centre sportif des Vergers",
+  "city": ""
+ },
+ {
+  "id": 1342,
+  "name": "Parking Vieux-Lully",
+  "city": ""
+ },
+ {
+  "id": 1341,
+  "name": "Passerelle piétonne des Bis",
+  "city": ""
+ },
+ {
+  "id": 1221,
+  "name": "Pavillon ADC",
+  "city": ""
+ },
+ {
+  "id": 530,
+  "name": "Pavillon Louis XVI - Hôpital de Beau-Séjour",
+  "city": "Genève"
+ },
+ {
+  "id": 1710,
+  "name": "Place de Graveson, Thônex",
+  "city": "Thônex"
+ },
+ {
+  "id": 253,
+  "name": "Place de l'Eglise de Confignon",
+  "city": "Confignon"
+ },
+ {
+  "id": 8,
+  "name": "Place de la Sardaigne",
+  "city": ""
+ },
+ {
+  "id": 1318,
+  "name": "Place de Meyrin-Village",
+  "city": ""
+ },
+ {
+  "id": 1531,
+  "name": "Place Du 150ème",
+  "city": ""
+ },
+ {
+  "id": 1277,
+  "name": "Place du Bourg-de-Four",
+  "city": "Genève"
+ },
+ {
+  "id": 1305,
+  "name": "Place du Mandement",
+  "city": ""
+ },
+ {
+  "id": 101,
+  "name": "Plaine de Plainpalais",
+  "city": "Genève"
+ },
+ {
+  "id": 122,
+  "name": "Point Favre",
+  "city": "Chêne-Bourg"
+ },
+ {
+  "id": 1253,
+  "name": "Pont de la Machine",
+  "city": ""
+ },
+ {
+  "id": 1252,
+  "name": "Qafé Guidoline",
+  "city": ""
+ },
+ {
+  "id": 1238,
+  "name": "Quai des Arts",
+  "city": "Rumilly"
+ },
+ {
+  "id": 91,
+  "name": "Salle communale d’Onex",
+  "city": "Onex"
+ },
+ {
+  "id": 99,
+  "name": "Salle communale Jean-Jacques Gautier",
+  "city": ""
+ },
+ {
+  "id": 1134,
+  "name": "Salle de spectacle IJD",
+  "city": ""
+ },
+ {
+  "id": 1315,
+  "name": "Salle des Fêtes de Jussy",
+  "city": ""
+ },
+ {
+  "id": 116,
+  "name": "Salle des fêtes de Troinex",
+  "city": "Troinex"
+ },
+ {
+  "id": 1294,
+  "name": "Salle Marie Laggé",
+  "city": ""
+ },
+ {
+  "id": 920,
+  "name": "Salle Trocmé",
+  "city": "Genève"
+ },
+ {
+  "id": 1189,
+  "name": "Salon de thé Le Prince",
+  "city": ""
+ },
+ {
+  "id": 1173,
+  "name": "Salon Musical de Dardagny",
+  "city": ""
+ },
+ {
+  "id": 1281,
+  "name": "Satigny",
+  "city": ""
+ },
+ {
+  "id": 47,
+  "name": "Scène des Clubs",
+  "city": ""
+ },
+ {
+  "id": 45,
+  "name": "Scène Ella Fitzgerald",
+  "city": ""
+ },
+ {
+  "id": 1158,
+  "name": "Site de Grand Donzel",
+  "city": "Vessy"
+ },
+ {
+  "id": 143,
+  "name": "Société de Lecture",
+  "city": ""
+ },
+ {
+  "id": 92,
+  "name": "Spectacles Onésiens",
+  "city": ""
+ },
+ {
+  "id": 1435,
+  "name": "Square Eugène Maître",
+  "city": "Annemasse"
+ },
+ {
+  "id": 1157,
+  "name": "Stade de Choulex",
+  "city": "Choulex"
+ },
+ {
+  "id": 209,
+  "name": "Swiss Chamber Concerts",
+  "city": ""
+ },
+ {
+  "id": 924,
+  "name": "Tamco",
+  "city": ""
+ },
+ {
+  "id": 866,
+  "name": "TemPL'Oz Arts",
+  "city": ""
+ },
+ {
+  "id": 756,
+  "name": "Temple de Cologny",
+  "city": ""
+ },
+ {
+  "id": 595,
+  "name": "Temple de la Fusterie",
+  "city": ""
+ },
+ {
+  "id": 233,
+  "name": "Temple de la Madeleine",
+  "city": ""
+ },
+ {
+  "id": 1683,
+  "name": "Temple du Lieu",
+  "city": "Le Lieu - Vallée de Joux"
+ },
+ {
+  "id": 1231,
+  "name": "Terrasse Agrippa-d'Aubigné",
+  "city": ""
+ },
+ {
+  "id": 289,
+  "name": "Théâtre de l’Espérance",
+  "city": "Genève"
+ },
+ {
+  "id": 49,
+  "name": "Théâtre de l’Orangerie",
+  "city": "Genève"
+ },
+ {
+  "id": 31,
+  "name": "Théâtre de l’Usine (TU)",
+  "city": "Genève"
+ },
+ {
+  "id": 279,
+  "name": "Théâtre du Bordeau",
+  "city": ""
+ },
+ {
+  "id": 19,
+  "name": "Théâtre du Galpon",
+  "city": "Genève"
+ },
+ {
+  "id": 842,
+  "name": "Théâtre du Hangar",
+  "city": "Troinex"
+ },
+ {
+  "id": 735,
+  "name": "Théâtre le Caveau",
+  "city": "Genève"
+ },
+ {
+  "id": 100,
+  "name": "Théâtre Le Châtelard",
+  "city": "Ferney-Voltaire - France"
+ },
+ {
+  "id": 1244,
+  "name": "Théâtre les Allos",
+  "city": "Cluses"
+ },
+ {
+  "id": 1275,
+  "name": "Théâtre Micromégas",
+  "city": ""
+ },
+ {
+  "id": 130,
+  "name": "Théâtricul",
+  "city": "Chêne-Bourg"
+ },
+ {
+  "id": 1156,
+  "name": "Tours AUREA",
+  "city": "Carouge"
+ },
+ {
+  "id": 1954,
+  "name": "Vidy Théâtre - Lausanne (Ge)",
+  "city": "Lausanne"
+ },
+ {
+  "id": 1227,
+  "name": "Villa du Parc - Centre d'art contemporain - Annemasse",
+  "city": ""
+ },
+ {
+  "id": 1206,
+  "name": "Villa Esprit3",
+  "city": ""
+ },
+ {
+  "id": 963,
+  "name": "Village du Soir",
+  "city": "Carouge"
+ },
+ {
+  "id": 1340,
+  "name": "Villatorium",
+  "city": ""
+ },
+ {
+  "id": 2007,
+  "name": "Concorde espace culture",
+  "city": "Vernier"
+ },
+ {
+  "id": 2,
+  "name": "Théâtre du Forum Meyrin",
+  "city": "Meyrin"
+ }
+]

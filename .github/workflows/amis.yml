@@ -1,0 +1,39 @@
+name: Accès amis — mise à jour des séances
+on:
+  schedule:
+    - cron: '17 */6 * * *'   # cinémas toutes les 6 h
+    - cron: '43 2 * * *'     # leprogramme.ch chaque nuit
+  workflow_dispatch:
+    inputs:
+      what:
+        description: 'cine ou lp'
+        default: 'cine'
+permissions:
+  contents: write
+concurrency: friends-update
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Choix de la source
+        id: w
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "what=${{ github.event.inputs.what }}" >> $GITHUB_OUTPUT;
+          elif [ "${{ github.event.schedule }}" = "43 2 * * *" ]; then echo "what=lp" >> $GITHUB_OUTPUT;
+          else echo "what=cine" >> $GITHUB_OUTPUT; fi
+      - name: Mise à jour
+        env:
+          FRIENDS_KEY: ${{ secrets.FRIENDS_KEY }}
+          TZ: Europe/Zurich
+        run: node --experimental-strip-types --no-warnings .scraper/update.mts ${{ steps.w.outputs.what }} p
+      - name: Publication
+        run: |
+          git config user.name "culture.gva bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add p
+          git diff --cached --quiet || (git commit -m "Accès amis : ${{ steps.w.outputs.what }}" && git push)
