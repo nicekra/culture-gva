@@ -1,0 +1,29 @@
+{
+ "name": "culture.gva",
+ "short_name": "culture.gva",
+ "description": "Toute la culture du Grand Genève, au même endroit.",
+ "lang": "fr-CH",
+ "start_url": "/culture-gva/",
+ "scope": "/culture-gva/",
+ "display": "standalone",
+ "background_color": "#FFFFFF",
+ "theme_color": "#E9233F",
+ "icons": [
+  {
+   "src": "/culture-gva/icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/culture-gva/icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "/culture-gva/icons/icon-1024.png",
+   "sizes": "1024x1024",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}
