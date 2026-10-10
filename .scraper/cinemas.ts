@@ -2,7 +2,7 @@
 // Seuls des faits sont repris : titre, date, heure, salle, durée, version, liens. Ni textes, ni affiches.
 import type { Event, Venue } from './types';
 
-export type CinemaKey = 'grutli' | 'bio' | 'spoutnik' | 'cinelux' | 'scala' | 'city' | 'nordsud' | 'empire';
+export type CinemaKey = 'grutli' | 'bio' | 'spoutnik' | 'cinelux' | 'scala' | 'city' | 'nordsud' | 'empire' | 'arena' | 'cine17' | 'balexert' | 'rex';
 export type Screening = {
   cinema: CinemaKey;
   title: string;
@@ -24,6 +24,11 @@ export const CINEMA_VENUES: Record<CinemaKey, Venue & { site: string }> = {
   city: { id: 'cine-city', name: 'Le City (Les Scala)', area: 'Genève', commune: 'Genève', site: 'https://les-scala.ch/fr/a-l-affiche' },
   nordsud: { id: 'cine-nordsud', name: 'Le Nord-Sud (Les Scala)', area: 'Genève', commune: 'Genève', address: 'Rue de la Servette 78, 1202 Genève', lat: 46.2124, lon: 6.1338, site: 'https://les-scala.ch/fr/a-l-affiche' },
   empire: { id: 'cine-empire', name: 'Cinérama Empire', area: 'Genève', commune: 'Genève', address: 'Rue de Carouge 72, 1205 Genève', lat: 46.1922, lon: 6.142, site: 'https://www.cine17.ch/?cine=cem' },
+  // Salles commerciales, horaires via cineman.ch
+  arena: { id: 'cine-arena', name: 'Arena Cinémas La Praille', area: 'Carouge', commune: 'Carouge', address: 'Route des Jeunes 10, 1227 Carouge', lat: 46.1776, lon: 6.1282, site: 'https://www.cineman.ch/fr/seances/geneve/' },
+  cine17: { id: 'cine-17', name: 'Ciné 17', area: 'Genève', commune: 'Genève', address: 'Rue de la Corraterie 17, 1204 Genève', lat: 46.2026, lon: 6.1437, site: 'https://www.cine17.ch/' },
+  balexert: { id: 'cine-balexert', name: 'Pathé Balexert', area: 'Vernier', commune: 'Genève', address: 'Avenue Louis-Casaï 27, 1209 Genève', lat: 46.2187, lon: 6.1107, site: 'https://www.pathe.ch/' },
+  rex: { id: 'cine-rex', name: 'Pathé Rex', area: 'Genève', commune: 'Genève', address: 'Rue de la Confédération 8, 1204 Genève', lat: 46.2036, lon: 6.1449, site: 'https://www.pathe.ch/' },
 };
 
 // ---------- utilitaires ----------
@@ -203,6 +208,35 @@ export function parseEmpire(html: string): Screening[] {
   return out;
 }
 
+// cineman.ch : page « séances à Genève » d'un jour donné, un bloc par cinéma
+const CINEMAN_MAP: [RegExp, CinemaKey][] = [
+  [/gr[uü]tli/i, 'grutli'], [/^bio/i, 'bio'], [/spoutnik/i, 'spoutnik'], [/cin[ée]lux/i, 'cinelux'], [/nord[- ]sud/i, 'nordsud'],
+  [/\bcity\b/i, 'city'], [/scala/i, 'scala'], [/empire/i, 'empire'], [/arena/i, 'arena'], [/cin[ée] ?17/i, 'cine17'],
+  [/balexert/i, 'balexert'], [/\brex\b/i, 'rex'],
+];
+export function parseCineman(html: string, day: string): Screening[] {
+  const [y, mo, d] = day.split('-').map(Number);
+  const out: Screening[] = [];
+  for (const block of html.split('<h2 class="headline headline-ruler">').slice(1)) {
+    const name = text(block.match(/<a href="\/fr\/seances\/cinema\/[^"]+">([\s\S]*?)<\/a>/)?.[1] ?? '');
+    const key = CINEMAN_MAP.find(([r]) => r.test(name))?.[1];
+    if (!key) continue;
+    for (const movie of block.split('<div class="showtimes-movie">').slice(1)) {
+      const t = movie.match(/<h4><a href="([^"]+)" class="link">([\s\S]*?)<\/a><\/h4>/);
+      if (!t) continue;
+      for (const item of movie.split('<div class="showtimes-list-item">').slice(1)) {
+        const ps = [...item.matchAll(/<p>([\s\S]*?)<\/p>/g)].map((m) => text(m[1]));
+        const times = [...(ps[0] ?? '').matchAll(/(\d{1,2}):(\d{2})/g)];
+        const info = (ps[1] ?? '').split(/\s*[–·]\s*/);
+        for (const tm of times) {
+          out.push({ cinema: key, title: text(t[2]), start: local(y, mo - 1, d, +tm[1], +tm[2]), hall: info[0] || undefined, version: info[1] || undefined, url: 'https://www.cineman.ch' + decode(t[1]), ticketUrl: 'https://www.cineman.ch' + decode(t[1]) });
+        }
+      }
+    }
+  }
+  return out;
+}
+
 // ---------- téléchargement poli (un site après l'autre, délai entre deux pages d'un même site) ----------
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 async function get(url: string) {
@@ -237,6 +271,19 @@ export async function fetchCinemas(onProgress?: (done: string) => void): Promise
       all.push(...parseScala(await get(`https://les-scala.ch/fr/a-l-affiche?dDate=${day}`)));
     }
     return all;
+  });
+  // cineman.ch : complète les séances manquantes et ajoute les salles commerciales (7 jours)
+  const direct = new Set(screenings.map((s) => `${s.cinema}|${new Date(s.start).getTime()}`));
+  await run('cineman', async () => {
+    const all: Screening[] = [];
+    for (let i = 0; i < 7; i++) {
+      const d = new Date(Date.now() + i * 864e5);
+      const day = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+      if (i) await sleep(3_000);
+      all.push(...parseCineman(await get(`https://www.cineman.ch/fr/seances/geneve/?date=${day}`), day));
+    }
+    // Les horaires lus sur le site du cinéma restent prioritaires
+    return all.filter((s) => !direct.has(`${s.cinema}|${new Date(s.start).getTime()}`));
   });
   // Doublons (même cinéma, même film, même heure)
   const seen = new Set<string>();
